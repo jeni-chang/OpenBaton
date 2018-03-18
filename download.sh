@@ -1,4 +1,3 @@
 #!bin/bash
 
-sudo > readme.txt
-sudo wget https://goo.gl/ch3iA1
+sudo mkdir 'Chang' && sudo wget "https://goo.gl/ch3iA1"
