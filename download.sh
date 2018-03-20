@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sudo mkdir 'Chang' && sudo wget "https://goo.gl/ch3iA1"
+cd .. && cd ..
+sudo mkdir 'Chang' 
+screen -d -m -S client wget -O ReSafetyServer.jar http://mnet.cs.nthu.edu.tw/mnet_old/ReSafetyServer/ReSafetyServer.jar
