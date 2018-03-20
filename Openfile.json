@@ -22,8 +22,7 @@
         {
           "event":"INSTANTIATE",
           "lifecycle_events":[
-            "install.sh",
-            "download.sh"
+            "install.sh"
           ]
         }
       ],
