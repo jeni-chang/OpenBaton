@@ -1,0 +1,17 @@
+{
+  "name":"vim-instance",
+  "authUrl":"http://controller:5000/v3",
+  "tenant":"c7e99bb779c94597ac196696d701f562",
+  "username":"admin",
+  "password":"lab731",
+  "keyPair":"mykey",
+  "securityGroups": [
+    "default"
+  ],
+  "type":"openstack",
+  "location":{
+    "name":"Berlin",
+    "latitude":"52.525876",
+    "longitude":"13.314400"
+  }
+}
