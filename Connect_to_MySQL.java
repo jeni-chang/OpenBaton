@@ -1,3 +1,4 @@
+package Main;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -17,11 +18,13 @@ public class Connect_to_MySQL {
 			System.out.println("Connect OpenBaton Database Successful!!!");
 			
 			Statement st = conn.createStatement();
-			st.execute("SELECT * FROM ip");
+			//SELECT <attribute list> FROM <table list> WHERE <condition>
+			st.execute("SELECT ip FROM ip WHERE ip like '10%' ");
 			ResultSet rs = st.getResultSet();
 			
 			while(rs.next()) {
-				System.out.println(rs.getString("id")+" "+rs.getString("hb_version")+" "+rs.getString("project_id")+" "+rs.getString("shared")+" "+rs.getString("ip")+" "+rs.getString("net_name"));
+				//System.out.println(rs.getString("id")+" "+rs.getString("hb_version")+" "+rs.getString("project_id")+" "+rs.getString("shared")+" "+rs.getString("ip")+" "+rs.getString("net_name"));
+				System.out.println(rs.getString("ip"));
 			}
 		}catch(Exception e) {
 			System.out.println("?");
