@@ -9,14 +9,15 @@
   ],
   "vnfd":[
     {
-      "name":"openfile",
+      "name":"safety",
       "vendor":"Chang",
       "version":"1.0",
        "lifecycle_event":[
         {
           "event":"INSTANTIATE",
           "lifecycle_events":[
-            "install.sh"
+            "install.sh",
+            "download.sh"
           ]
         }
       ],
