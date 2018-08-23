@@ -1,0 +1,80 @@
+//  系統模式 ，只能選擇其中一個
+// service start -> 一般模式，開啟server提供手機端APP服務
+// GUI debug -> 用來一步一步debug計算的數據，讀入的檔案為Simulation mode所產生的LOG
+// simulation run -> 跑模擬用
+// 目前設定檔只有處理mode防呆(只能選擇一種mode) 其餘設置並沒有檢查
+
+//(1)service_start   
+//(2)GUI_replay     
+//(3)simulation_run_flag 
+//(4)GUI_debug 
+System_mode 1
+
+
+// 
+service_delayCount 1000
+
+// Predict time
+service_predict_length 5
+
+// service log name -> 正常模式(1)下，記錄使用者資訊的檔名
+// GUI replay file -> 在GUI replay mode中讀的檔名
+service_log_name ServiceLog.txt
+GUI_replay_file SimulationFIle/轉彎.txt
+
+
+// GUI 座標基準點與偏移量 
+location_x_basic 249200
+location_y_basic 2743000
+location_x_offset 100
+location_y_offset 100
+
+
+//double XY[] = {253000,2745000,
+//	252000,2744700,
+//  251100,2742900,
+//	249800,2743200};
+
+//Costco
+//	public static double X_basic = 251423; 
+//	public static double Y_basic = 2742608;
+//	public static double X_offset = 200;
+//	public static double Y_offset = 300;
+
+//School	
+//public static double X_basic = 249300; 
+//public static double Y_basic = 2743100;
+//public static double X_offset = 200;
+//public static double Y_offset = 200;
+
+
+// 模擬參數
+
+position_add_GPS_error false
+simulation_create_debug_log false
+simulation_time 100
+simulation_record_size 40
+//simulation_read_file_indexes 3,6,7
+simulation_read_file_indexes 8
+//simulation_read_file_indexes 8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33
+simulation_shift_flag false
+simulation_continuous_shift_time false
+simulation_start_shift_time 5
+simulation_end_shift_time 5
+
+
+// 演算法模組
+sector_add_turning_extend_algorithm false
+sector_add_GPS_error true
+sector_add_vehicular_length false
+location_add_kalman_filiter false
+
+//fake gps errors
+gps_max_errors 10,7.5,5,2.5
+
+//GUI 長框 (only for replay mode)
+panel_width 1000
+panel_hight 1000
+grid_map_width 900
+grid_map_hight 900
+grid_cell_size 300
